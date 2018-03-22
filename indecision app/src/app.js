@@ -1,5 +1,7 @@
 console.log("app.js is working");
 
+const appRoot = document.getElementById("app");
+
 //jsx
 const app = {
     title : "Who now?",
@@ -18,15 +20,3 @@ const template = (
         </ol>
     </div>
 );
-
-const templateTwo = (
-    <div>
-    <h1>Yash Rathore</h1>
-    <p>Age: unkown</p>
-    <p>Location: Allahabad </p>
-    </div>
-);
-
-const appRoot = document.getElementById("app");
-
-ReactDOM.render(template, appRoot);

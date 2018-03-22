@@ -2,6 +2,8 @@
 
 console.log("app.js is working");
 
+var appRoot = document.getElementById("app");
+
 //jsx
 var app = {
     title: "Who now?",
@@ -44,27 +46,3 @@ var template = React.createElement(
         )
     )
 );
-
-var templateTwo = React.createElement(
-    "div",
-    null,
-    React.createElement(
-        "h1",
-        null,
-        "Yash Rathore"
-    ),
-    React.createElement(
-        "p",
-        null,
-        "Age: unkown"
-    ),
-    React.createElement(
-        "p",
-        null,
-        "Location: Allahabad "
-    )
-);
-
-var appRoot = document.getElementById("app");
-
-ReactDOM.render(template, appRoot);
