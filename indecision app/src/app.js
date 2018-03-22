@@ -29,9 +29,7 @@ const templateTwo = (
 
 const fullName = "What Pumpkin";
 
-const getFirstName = (x) =>{
-    return fullName.split(' ')[0];
-};
+const getFirstName = (x) => fullName.split(' ')[0];
 
 console.log(getFirstName(fullName));
 
