@@ -65,6 +65,14 @@ var templateTwo = React.createElement(
     )
 );
 
+var fullName = "What Pumpkin";
+
+var getFirstName = function getFirstName(x) {
+    return fullName.split(' ')[0];
+};
+
+console.log(getFirstName(fullName));
+
 var appRoot = document.getElementById("app");
 
 ReactDOM.render(template, appRoot);
