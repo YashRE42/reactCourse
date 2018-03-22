@@ -27,11 +27,15 @@ const templateTwo = (
     </div>
 );
 
-const fullName = "What Pumpkin";
+const multiplier = {
+    numbers = ['1', '2', '3'],
+    multiplyBy = 2,
+    muliply() {
+        return this.numbers.map((number) => number * this.multiplyBy);
+    }
+}
 
-const getFirstName = (x) => fullName.split(' ')[0];
-
-console.log(getFirstName(fullName));
+console.log(multiplier.muliply());
 
 const appRoot = document.getElementById("app");
 
