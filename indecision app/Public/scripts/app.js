@@ -65,20 +65,6 @@ var templateTwo = React.createElement(
     )
 );
 
-var multiplier = {
-    numbers: ['1', '2', '3'],
-    multiplyBy: 2,
-    muliply: function muliply() {
-        var _this = this;
-
-        return this.numbers.map(function (number) {
-            return number * _this.multiplyBy;
-        });
-    }
-};
-
-console.log(multiplier.muliply());
-
 var appRoot = document.getElementById("app");
 
 ReactDOM.render(template, appRoot);

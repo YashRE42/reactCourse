@@ -27,16 +27,6 @@ const templateTwo = (
     </div>
 );
 
-const multiplier = {
-    numbers : ['1', '2', '3'],
-    multiplyBy : 2,
-    muliply() {
-        return this.numbers.map((number) => number * this.multiplyBy);
-    }
-}
-
-console.log(multiplier.muliply());
-
 const appRoot = document.getElementById("app");
 
 ReactDOM.render(template, appRoot);
