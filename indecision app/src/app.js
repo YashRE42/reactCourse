@@ -28,8 +28,8 @@ const templateTwo = (
 );
 
 const multiplier = {
-    numbers = ['1', '2', '3'],
-    multiplyBy = 2,
+    numbers : ['1', '2', '3'],
+    multiplyBy : 2,
     muliply() {
         return this.numbers.map((number) => number * this.multiplyBy);
     }
