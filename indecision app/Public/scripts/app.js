@@ -56,7 +56,7 @@ var templateTwo = React.createElement(
     React.createElement(
         "p",
         null,
-        "Age: 20"
+        "Age: unkown"
     ),
     React.createElement(
         "p",
