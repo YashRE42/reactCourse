@@ -9,13 +9,20 @@ class Person{
     }
 
     getDescription(){
-        return `${this.name} is ${this.age} year${this.age == 1?'':'s'} old`;
+        return `${this.name} is ${this.age} year${this.age == 1?'':'s'} old.`;
     }
 }
 
-const me = new Person;
+class Student extends Person {
+    constructor(name, age, major){
+        super(name, age);
+        this.major = major;
+    }
+}
+
+const me = new Student;
 console.log(me.getDescription());
 
-const him = new Person('Borowman','1');
+const him = new Student('Barrowman','1');
 console.log(him)
 console.log(him.getDescription());
