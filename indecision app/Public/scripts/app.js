@@ -22,8 +22,8 @@ var Person = function () {
     }
 
     _createClass(Person, [{
-        key: 'getGretting',
-        value: function getGretting() {
+        key: 'getGreeting',
+        value: function getGreeting() {
             return 'Hi. I am ' + this.name + '!';
         }
     }, {
@@ -85,9 +85,9 @@ var Traveller = function (_Person2) {
             return !!this.homeLocation;
         }
     }, {
-        key: 'getGretting',
-        value: function getGretting() {
-            var greeting = _get(Traveller.prototype.__proto__ || Object.getPrototypeOf(Traveller.prototype), 'getGretting', this).call(this);
+        key: 'getGreeting',
+        value: function getGreeting() {
+            var greeting = _get(Traveller.prototype.__proto__ || Object.getPrototypeOf(Traveller.prototype), 'getGreeting', this).call(this);
             if (this.hasHomeLocation()) {
                 greeting += ' I am visiting from ' + this.homeLocation + '.';
             }
@@ -98,8 +98,8 @@ var Traveller = function (_Person2) {
     return Traveller;
 }(Person);
 
-var me = new Traveller();
-console.log(me.getGretting());
+var me = new Traveller(undefined, undefined, "Nowhere");
+console.log(me.getGreeting());
 
 var him = new Traveller('Barrowman', '1', 'New Earth');
-console.log(him.getGretting());
+console.log(him.getGreeting());
