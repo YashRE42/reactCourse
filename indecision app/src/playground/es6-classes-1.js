@@ -18,11 +18,23 @@ class Student extends Person {
         super(name, age);
         this.major = major;
     }
+
+    hasMajor() {
+        return !!this.major; //returns boolean true or false, converts undefined to false
+    }
+
+    getDescription() {
+        let description = super.getDescription();
+        if (this.hasMajor){
+            description += ` Their major is ${this.major}.`;
+        }
+        return description;
+    }
 }
 
 const me = new Student;
 console.log(me.getDescription());
 
-const him = new Student('Barrowman','1');
+const him = new Student('Barrowman', '1', 'Time travelling');
 console.log(him)
 console.log(him.getDescription());
