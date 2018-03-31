@@ -40,8 +40,12 @@ class Action extends React.Component {
 }
 
 class Options extends React.Component {
+    constructor(props){
+        super(props);
+        this.handleRemoveAll = this.handleRemoveAll.bind(this);
+    }
     handleRemoveAll(){
-        alert('All to be removed');
+        alert(this.props.options + ' -are to be removed');
     }
     render() {
         return (
