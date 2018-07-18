@@ -8,30 +8,26 @@ class IndecisionApp extends React.Component {
             options: props.options
         }
     }
+
     handleDeleteOptions() {
-        this.setState(() => {
-            return {
-                options: []
-            }
-        });
+        this.setState(()=>({ options:[] }));
     }
+
     handlePick() {
         const randomNum = Math.floor(Math.random() * this.state.options.length);
         const option = this.state.options[randomNum];
         alert(option);
     }
+
     handleAddOption(option) {
         if (!option) {
             return 'Enter a valid value to add item';
         } else if (this.state.options.indexOf(option) > -1) {
             return 'this option already exists';
         }
-        this.setState((prevState) => {
-            return {
-                options: prevState.options.concat([option])
-            }
-        })
+        this.setState((prevState) => ({ options: prevState.options.concat([option]) }))
     }
+
     render() {
         const subtitle = "Put your hands in the life of a computer";
         return (
@@ -51,6 +47,10 @@ class IndecisionApp extends React.Component {
             </div>
         )
     }
+}
+
+IndecisionApp.defaultProps = {
+    options:[]
 }
 
 const Header = (props) => {
@@ -110,9 +110,7 @@ class AddOption extends React.Component {
         e.preventDefault();
         const option = e.target.elements.option.value.trim();
         const error = this.props.handleAddOption(option);
-        this.setState(() => {
-            return { error }
-        });
+        this.setState(() => ({ error }));
     }
     render() {
         return (
