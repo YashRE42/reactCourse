@@ -1,9 +1,11 @@
 // import "./utils.js"
-import {square, add} from "./utils.js"
+import subtract2, {square, add} from "./utils.js"
 
 console.log(square(4));
 
 console.log(add(100,23));
+
+console.log(subtract2(10000,8766));
 
 import {isAdult, canDrink} from "./person.js"
 
