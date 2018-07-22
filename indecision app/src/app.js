@@ -1,3 +1,6 @@
-import validator from "validator";
+import React from "react";
+import ReactDOM from "react-dom";
 
-console.log(validator.isEmail("nopenope@gmail.com"));
+const template = <p> this is jsx </p>
+
+ReactDOM.render(template,document.getElementById("app"));
