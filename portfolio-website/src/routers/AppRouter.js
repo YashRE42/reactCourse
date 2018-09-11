@@ -4,6 +4,7 @@ import NotFoundPage from "../components/NotFoundPage";
 import Header from "../components/Header";
 import HomePage from "../components/HomePage";
 import ContactPage from "../components/ContactPage";
+import PortfolioItemPage from "../components/PortfolioItemPage";
 
 const AppRouter = () => (
     <BrowserRouter>
@@ -11,6 +12,7 @@ const AppRouter = () => (
             <Header />
             <Switch>
                 <Route path="/" component={HomePage} exact={true} />
+                <Route path="/portfolio/:id" component={PortfolioItemPage} />
                 <Route path="/contact" component={ContactPage} />
                 <Route component={NotFoundPage} />
             </Switch>
